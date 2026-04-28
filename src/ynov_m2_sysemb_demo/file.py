@@ -29,11 +29,12 @@ class CsvFile:
                 dict_writer.writerow(entry)
 
     def load(self, csv_source_file: Path) -> dict:
+
         with open(csv_source_file, 'r') as file:
             dict_reader = DictReader(file)
             for line in dict_reader:
                 print(line)
-        pass
+        return dict_reader
 
 class PickleFile:
     def save(self, data: any, pickle_destination_file: Path):
