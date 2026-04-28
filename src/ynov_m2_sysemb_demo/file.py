@@ -28,12 +28,10 @@ class CsvFile:
             for entry in data:
                 dict_writer.writerow(entry)
 
-    def load(self, csv_source_file: Path) -> dict:
+    def load(self, csv_source_file: Path) -> DictReader:
 
         with open(csv_source_file, 'r') as file:
             dict_reader = DictReader(file)
-            for line in dict_reader:
-                print(line)
         return dict_reader
 
 class PickleFile:

@@ -18,4 +18,4 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-start = "hostname"
+start = "ynov_m2_sysemb_demo.statistics_demo:main"
